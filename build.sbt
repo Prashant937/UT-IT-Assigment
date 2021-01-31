@@ -10,5 +10,5 @@ lazy val ques1andques2 = project.in(file("ques1andques2"))
 lazy val ques3 = project.in(file("ques3"))
   .settings(libraryDependencies ++= Seq("org.scalatest" %% "scalatest" % "3.3.0-SNAP3" % Test, "org.mockito" %% "mockito-scala" % "1.16.15" % Test))
 
-
+lazy val root = project.in(file(".")).aggregate(ques1andques2, ques3)
 
